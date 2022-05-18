@@ -12,11 +12,17 @@ if (isset($_POST['comment_cont'])){
     file_put_contents("../index.json", json_encode($index));
 }
 $index = json_decode(file_get_contents("../index.json"), true);
+if(file_exists("../" . $index['posts'][$post]['img'])){
+    $img = "<img src='" . $index['posts'][$post]['img'] . "' class='big_post' width='800' height=auto/>";
+} else{
+    $img = "";
+}
 echo "
-<link href='/style.css' rel='stylesheet' type='text/css'/>
 <img onclick='location=\"/Users/posts.php?user=" . $index['users'][$index['posts'][$post]['write']]['user-id'] . "\"' src='" . $index['users'][$index['posts'][$post]['write']]['pfp'] . "' width='50' class='profile' height=auto/>" . $index['users'][$index['posts'][$post]['write']]['user-name'] . "<br>
-" . $index['posts'][$post]['context'] . "<br>
-<img src='" . $index['posts'][$post]['img'] . "' class='big_post' width='800' height=auto/><br>
+" .$index['posts'][$post]['context'] . "<br>
+" . $img . "<br>
+<img src='https://www.freeiconspng.com/uploads/comment-png-3.png' width='30' height='auto' onclick='location=\"/Posts/comment.php?post=" . $index['posts'][$post]['post-id'] . "\"'/>" . count($index['posts'][$post]['comments']) . "
+<img src='https://image.similarpng.com/very-thumbnail/2020/06/Icon-like-button-transparent-PNG.png' width='30' height='auto' onclick='location=\"/Posts/like.php?post=" . $index['posts'][$post]['post-id'] . "\"'/>" . count($index['posts'][$post]['likes']) . "<br><br>
 ";
 foreach ($index['posts'][$post]['comments'] as $comment_array){
     echo "
