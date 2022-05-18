@@ -1,0 +1,46 @@
+{
+    "users":{
+        "1548":{
+            "user-name":"Duedot43",
+            "user-id":"1548",
+            "posts":[
+                "1829"
+            ],
+            "pfp":"/Users/1548",
+            "following":[
+                "4396"
+            ],
+            "followers":[
+                "4396"
+            ]
+        },
+        "4396":{
+            "user-name":"Other man",
+            "user-id":"4396",
+            "posts":[
+            ],
+            "pfp":"/Users/1548",
+            "following":[
+                "1548"
+            ],
+            "followers":[
+                "1548"
+            ]
+        }
+    },
+    "posts":{
+        "1829":{
+            "post-id":"1829",
+            "img":"/Posts/1829.png",
+            "context":"Random image!",
+            "write":"1548",
+            "comments":{
+                "7523":{
+                    "comment-id":"7523",
+                    "writer":"4396",
+                    "content":"Nice image!"
+                }
+            }
+        }
+    }
+}
