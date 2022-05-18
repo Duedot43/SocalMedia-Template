@@ -1,4 +1,5 @@
 <?php
+echo "<link href='/style.css' rel='stylesheet' type='text/css'/><img src='https://static.vecteezy.com/system/resources/previews/000/421/945/original/house-icon-vector-illustration.jpg' onclick='location=\"/\"' class='profile' width='50' height=auto/><br>";
 $user = $_GET['user'];
 $index = json_decode(file_get_contents("../index.json"), true);
 if(!in_array($user, $index['users'][$_COOKIE['user_id']]['following'])){

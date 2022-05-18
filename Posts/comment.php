@@ -1,4 +1,5 @@
 <?php
+echo "<link href='/style.css' rel='stylesheet' type='text/css'/><img src='https://static.vecteezy.com/system/resources/previews/000/421/945/original/house-icon-vector-illustration.jpg' onclick='location=\"/\"' class='profile' width='50' height=auto/><br>";
 $post = $_GET['post'];
 $index = json_decode(file_get_contents("../index.json"), true);
 if (isset($_POST['comment_cont'])){
