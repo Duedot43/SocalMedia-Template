@@ -7,12 +7,14 @@ if (isset($_POST['context'])){
         "img"=>"/Posts/" . $post_id . ".png",
         "context"=>$_POST['context'],
         "write"=>$_COOKIE['user_id'],
-        "comments"=>array()
+        "comments"=>array(),
+        "likes"=>array()
     );
     array_push($index['users'][$_COOKIE['user_id']]['posts'], $post_id);
     file_put_contents("../index.json", json_encode($index));
     move_uploaded_file($_FILES['fileToUpload']['tmp_name'], "./" . $post_id . ".png");
     header("Location: /");
+    exit();
 }
 
 ?>

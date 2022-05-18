@@ -14,7 +14,8 @@ foreach ($index['posts'] as $post_array){
     <img onclick='location=\"/Users/posts.php?user=" . $index['users'][$post_array['write']]['user-id'] . "\"' src='" . $index['users'][$post_array['write']]['pfp'] . "' width='50' class='profile' height=auto/>" . $index['users'][$post_array['write']]['user-name'] . "<br>
     " .$post_array['context'] . "<br>
     <img src='" . $post_array['img'] . "' class='big_post' width='800' height=auto/><br>
-    <img src='https://www.freeiconspng.com/uploads/comment-png-3.png' width='30' height='auto' onclick='location=\"/Posts/comment.php?post=" . $post_array['post-id'] . "\"'/>
+    <img src='https://www.freeiconspng.com/uploads/comment-png-3.png' width='30' height='auto' onclick='location=\"/Posts/comment.php?post=" . $post_array['post-id'] . "\"'/>" . count($post_array['comments']) . "
+    <img src='https://image.similarpng.com/very-thumbnail/2020/06/Icon-like-button-transparent-PNG.png' width='30' height='auto' onclick='location=\"/Posts/like.php?post=" . $post_array['post-id'] . "\"'/>" . count($post_array['likes']) . "
     ";
 }
 ?>
