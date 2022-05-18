@@ -13,7 +13,7 @@ foreach ($index['posts'] as $post_array){
     echo "
     <img onclick='location=\"/Users/posts.php?user=" . $index['users'][$post_array['write']]['user-id'] . "\"' src='" . $index['users'][$post_array['write']]['pfp'] . "' width='50' class='profile' height=auto/>" . $index['users'][$post_array['write']]['user-name'] . "<br>
     " .$post_array['context'] . "<br>
-    <img src='" . $post_array['img'] . "' class='big_post' /><br>
+    <img src='" . $post_array['img'] . "' class='big_post' width='800' height=auto/><br>
     ";
 }
 ?>
