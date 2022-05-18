@@ -12,13 +12,14 @@ if (isset($_POST['uname']) and isset($_POST['passwd'])){
             exit();
         }
     }
+    echo"Your username or password is incorrect!";
 }
 
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Register</title>
 <tr>
-    <form method="post" name="form" enctype="multipart/form-data" action="/Users/sign-up.php">
+    <form method="post" name="form" enctype="multipart/form-data" action="/Users/login.php">
         <td>
             <table width="100%" border="0" cellpadding="3" cellspacing="1">
                 <tr>
