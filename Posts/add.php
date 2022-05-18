@@ -34,13 +34,13 @@ if (isset($_POST['context'])){
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="file" name="fileToUpload" id="fileToUpload">Upload a profile picture</td>
+                    <td><input type="file" name="fileToUpload" id="fileToUpload">Upload a image</td>
                 </tr>
 </tr>
 <tr>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td><input class="reg" type="submit" name="Submit" value="Login"></td>
+    <td><input class="reg" type="submit" name="Submit" value="Submit"></td>
 </tr>
 </table>
 </td>
