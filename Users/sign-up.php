@@ -9,7 +9,7 @@ if (isset($_POST['uname']) and isset($_POST['passwd'])){
         "user-name"=>$_POST['uname'],
         "user-id"=>$uid,
         "posts"=>array(),
-        "pfp"=>"/User/" . $uid . ".png",
+        "pfp"=>"/Users/" . $uid . ".png",
         "following"=>array(),
         "followers"=>array(),
         "token"=>$token,
