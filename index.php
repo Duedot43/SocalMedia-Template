@@ -8,7 +8,7 @@ if(!isset($index['users'][$_COOKIE['user_id']]) or $index['users'][$_COOKIE['use
     echo ('<button onclick="location=\'/Users/login.php\'">Login</button><button onclick="location=\'/Users/sign-up.php\'">Sign up</button>');
     exit();
 }
-echo "<link href='/style.css' rel='stylesheet' type='text/css'/> <img src='" . $index['users'][$_COOKIE['user_id']]['pfp'] . "' width='50' class='profile' height=auto\><br>Welcome, " . $index['users'][$_COOKIE['user_id']]['user-name'] . "<br><img src='https://cdn.onlinewebfonts.com/svg/img_28497.png' width='50'  height=auto onclick='location=\"/Posts/add.php\"'/><br>";
+echo "<link href='/style.css' rel='stylesheet' type='text/css'/> <img src='" . $index['users'][$_COOKIE['user_id']]['pfp'] . "' width='50' class='profile' onclick='location=\"/Users/edit.php\"' height=auto\><br>Welcome, " . $index['users'][$_COOKIE['user_id']]['user-name'] . "<br><img src='https://cdn.onlinewebfonts.com/svg/img_28497.png' width='50'  height=auto onclick='location=\"/Posts/add.php\"'/><br>";
 foreach ($index['posts'] as $post_array){
     if(file_exists("./" . $post_array['img'])){
         $img = "<img src='" . $post_array['img'] . "' class='big_post' width='800' height=auto/>";
